@@ -6,10 +6,13 @@ from dotenv import load_dotenv
 
 from story import generate_gift_boxes, generate_story_choices, generate_storyboard
 from media import generate_image, generate_narration, create_original_music, render_short
-load_dotenv()
-st.set_page_config(page_title="Magic Kids AI", page_icon="🎁", layout="wide")st.title("🎁 Magic Kids AI")
-st.caption("Üç kutu seç. İçinden üç macera çıksın. Seçtiğin hikâye özgün görselleri, anlatımı ve müziğiyle Shorts'a dönüşsün.")
 
+load_dotenv()
+
+st.set_page_config(page_title="Magic Kids AI", page_icon="🎁", layout="wide")
+
+st.title("🎁 Magic Kids AI")
+st.caption("Üç kutu seç. İçinden üç macera çıksın.")
 def get_key():
     try:
         return st.secrets.get("OPENAI_API_KEY", "") or os.getenv("OPENAI_API_KEY", "")
